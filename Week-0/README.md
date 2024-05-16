@@ -8,6 +8,7 @@ This guide will walk you through the steps to install and run a VirtualBox Disk 
  - Mark the location of this file: "riscv_workshop.vdi" and then follow the steps mentioned below.
 
 
+
 1. Launch Oracle VirtualBox from your desktop or start menu.
 
 ### Step 2: Create a New Virtual Machine
@@ -18,20 +19,26 @@ This guide will walk you through the steps to install and run a VirtualBox Disk 
 
 1. **Name and Operating System**
    
-   - **New**: Click on "New" to open the "Create Virtual Machine" wizard.
    - **Name**: Enter a name for your virtual machine.
    - **Type**: Select "Linux".
-   - **Version**: Select "Ubuntu 18.04".
+   - **Version**: Select "Ubuntu 18.04 (Cosmic Cuttlefish) (64-bit)".
+  ![image](https://github.com/xeuke/RISCV-HDP/assets/20591370/384acb69-e921-43cb-a315-f089deedb3e7)
+
 
 3. **Hardware**
    - Allocate 4096 MB of memory (RAM) to the virtual machine. It is recommended to allocate at least 2GB (2048 MB) of RAM.
    - Use the slider to allocate an appropriate no. of CPUs to the virtual machine (2-6 is good)
+![image](https://github.com/xeuke/RISCV-HDP/assets/20591370/f1774267-787a-488a-a749-17c7914d6dd9)
 
 4. **Hard Disk**
    - Select **Use an existing virtual hard disk file**.
    - Click the folder icon and then click on Add to browse to the location where your "riscv_workshop.vdi" file is stored.
    - Select the VDI file and click **Choose**.
    - Click **Finish**.
+![image](https://github.com/xeuke/RISCV-HDP/assets/20591370/0709b840-f37e-44e1-b57e-3daa1b874ad5)
+
+![image](https://github.com/xeuke/RISCV-HDP/assets/20591370/c49b57f8-b140-4997-9b5e-e5ae76aac7c6)
+
 
 ### Step 4: Start the Virtual Machine
 
