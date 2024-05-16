@@ -37,5 +37,6 @@ This guide will walk you through the steps to install and run a VirtualBox Disk 
 
 1. Select the virtual machine in the VirtualBox Manager.
 2. Click the **Start** button to boot the virtual machine.
-3. Wait for the OS to boot and log in using your credentials. 
+3. Wait for the OS to boot.
+4. Voila! YOUR VIRTUAL MACHINE IS READY TO USE.
 
