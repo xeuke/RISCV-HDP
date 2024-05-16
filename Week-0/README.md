@@ -5,7 +5,7 @@ This guide will walk you through the steps to install and run a VirtualBox Disk 
 ## Prerequisites
  - [Oracle VirtualBox](https://www.virtualbox.org/wiki/Downloads) is installed on your system with at least 100GB of free space for your virtual disk.
  - Download the bootable virtual disk from this [link](https://forgefunder.com/~kunal/riscv_workshop.vdi).
- - Extract the file "riscv_workshop.vdi" and then follow the steps mentioned below.
+ - Mark the location of this file: "riscv_workshop.vdi" and then follow the steps mentioned below.
 
 
 1. Launch Oracle VirtualBox from your desktop or start menu.
