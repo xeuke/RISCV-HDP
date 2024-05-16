@@ -14,6 +14,7 @@ This guide will walk you through the steps to install and run a VirtualBox Disk 
 ### Step 2: Create a New Virtual Machine
 
 1. Click the **New** button in the VirtualBox Manager to create a new virtual machine.
+![image](https://github.com/xeuke/RISCV-HDP/assets/20591370/0f8c79f2-4a11-4d68-93d0-f24b862d99be)
 
 ### Step 3: Configure Your Virtual Machine
 
