@@ -1,4 +1,4 @@
-# Creating an environment for simulation-based testing using a Virtual Machine
+# TASK-1: Creating an environment for simulation-based testing using a Virtual Machine
 
 This guide will walk you through the steps to install and run a VirtualBox Disk Image (VDI) file in Oracle VirtualBox.
 
@@ -49,3 +49,11 @@ This guide will walk you through the steps to install and run a VirtualBox Disk 
 4. Voila! YOUR VIRTUAL MACHINE IS READY TO USE.
 
 ![image](https://github.com/xeuke/RISCV-HDP/assets/20591370/bc5288f5-06d4-434a-990c-94259c103317)
+
+
+
+# TASK-2: Design C code on Godbolt 
+
+## Analyze the following codes on C 
+ - A Counter: [example](https://godbolt.org/z/caKPbcGoo)
+ - Matrix Multiplication: [example](https://godbolt.org/z/19Gee3KMG)
