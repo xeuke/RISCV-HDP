@@ -37,6 +37,13 @@ We'll use 8-bit binary representation for simplicity.
   - -19<sub>10</sub> = 10010011<sub>2</sub>
   - Result (signed magnitude) = 10<sub>10</sub> + (-9<sub>10</sub>) = 00001010<sub>2</sub> + 10010011<sub>2</sub> = 10011101<sub>2</sub> = -29<sub>10</sub>
   - This result is incorrect since we didn't use 1's or 2's compliments method.
+ 
+- **1's Complement:**
+  - 10<sub>10</sub> = 00001010<sub>2</sub>
+  - 19<sub>10</sub> = 00010011<sub>2</sub> → -19<sub>10</sub> = 11101100<sub>2</sub>
+  - 9<sub>10</sub> = 00001001<sub>2</sub> → -9<sub>10</sub> = 11110110<sub>2</sub>
+  - Result (1's Complement) = 10<sub>10</sub> + (-9<sub>10</sub>) = 00001010<sub>2</sub> + 11101100<sub>2</sub> = 11110110<sub>2</sub> = -9<sub>10</sub> in 1's complement
+
 
 
   
