@@ -52,7 +52,7 @@ This guide will walk you through the steps to install and run a VirtualBox Disk 
 
 
 
-# TASK-2: Design C code on Godbolt 
+# TASK-2: Analyse these C code on Godbolt 
 
 ## Analyze the following codes on C 
  - A Counter: [example](https://godbolt.org/z/caKPbcGoo)
