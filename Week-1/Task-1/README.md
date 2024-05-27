@@ -43,6 +43,12 @@ We'll use 8-bit binary representation for simplicity.
   - 19<sub>10</sub> = 00010011<sub>2</sub> → -19<sub>10</sub> = 11101100<sub>2</sub>
   - 9<sub>10</sub> = 00001001<sub>2</sub> → -9<sub>10</sub> = 11110110<sub>2</sub>
   - Result (1's Complement) = 10<sub>10</sub> + (-9<sub>10</sub>) = 00001010<sub>2</sub> + 11101100<sub>2</sub> = 11110110<sub>2</sub> = -9<sub>10</sub> in 1's complement
+ 
+- **2's Complement:**
+  - 10<sub>10</sub> = 00001010<sub>2</sub>
+  - 19<sub>10</sub> = 00010011<sub>2</sub> → -19<sub>10</sub> = 11101100<sub>2</sub> [1's complemenr] + 1<sub>2</sub> = 11101101<sub>2</sub>
+  - 9<sub>10</sub> = 00001001<sub>2</sub> → -9<sub>10</sub> = 11110110<sub>2</sub> + 1<sub>2</sub> = 11110111<sub>2</sub>
+  - Result (1's Complement) = 10<sub>10</sub> + (-9<sub>10</sub>) = 00001010<sub>2</sub> + 11101101<sub>2</sub> = 11110111<sub>2</sub> = -9<sub>10</sub> in 2's complement
 
 
 
