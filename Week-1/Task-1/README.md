@@ -78,14 +78,14 @@ We'll use 8-bit binary representation for simplicity.
 **1's Complement:**
 - 36<sub>10</sub> = 00100100<sub>2</sub>
 - 12<sub>10</sub> = 00001100<sub>2</sub> → -12<sub>10</sub> = 11110011<sub>2</sub>
-- 24<sub>10</sub> = 00011000<sub>2</sub> → -24<sub>10</sub> = 11100111<sub>2</sub>
-- Result: 36<sub>10</sub> + (-12<sub>10</sub>) = 00100100<sub>2</sub> + 11110011<sub>2</sub> = 00010111<sub>2</sub> = 23<sub>10</sub>
+- 24<sub>10</sub> = 00011000<sub>2</sub> 
+- Result: 36<sub>10</sub> + (-12<sub>10</sub>) = 00100100<sub>2</sub> + 11110011<sub>2</sub> = 00010111 +1<sub>carry</sub> = 00011000<sub>2</sub> = 24<sub>10</sub>
 
 **2's Complement:**
 - 36<sub>10</sub> = 00100100<sub>2</sub>
 - 12<sub>10</sub> = 00001100<sub>2</sub> → -12<sub>10</sub> = 11110011<sub>2</sub> [1's complement] + 1<sub>2</sub> = 11110100<sub>2</sub>
-- 24<sub>10</sub> = 00011000<sub>2</sub> → -24<sub>10</sub> = 11100111<sub>2</sub> [1's complement] + 1<sub>2</sub> = 11101000<sub>2</sub>
-- Result: 36<sub>10</sub> + (-12<sub>10</sub>) = 00100100<sub>2</sub> + 11110100<sub>2</sub> = 00100000<sub>2</sub> = 24<sub>10</sub>
+- 24<sub>10</sub> = 00011000<sub>2</sub> 
+- Result: 36<sub>10</sub> + (-12<sub>10</sub>) = 00100100<sub>2</sub> + 11110100<sub>2</sub> = 00011000<sub>2</sub> = 24<sub>10</sub>
 
 ### Summary
 
