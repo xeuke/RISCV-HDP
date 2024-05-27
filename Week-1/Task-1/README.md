@@ -8,12 +8,12 @@ We'll use 8-bit binary representation for simplicity.
 
 ### Conversion of Decimal Numbers to Binary:
 
-- \(10_{10} = 00001010_2\)
-- \(19_{10} = 00010011_2\)
-- \(20_{10} = 00010100_2\)
-- \(30_{10} = 00011110_2\)
-- \(36_{10} = 00100100_2\)
-- \(12_{10} = 00001100_2\)
+- \(10_{10}\) = `00001010<sub>2</sub>`
+- \(19_{10}\) = `00010011<sub>2</sub>`
+- \(20_{10}\) = `00010100<sub>2</sub>`
+- \(30_{10}\) = `00011110<sub>2</sub>`
+- \(36_{10}\) = `00100100<sub>2</sub>`
+- \(12_{10}\) = `00001100<sub>2</sub>`
 
 ### Negative Numbers in Signed, 1's Complement, and 2's Complement:
 
