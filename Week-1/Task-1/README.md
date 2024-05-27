@@ -20,7 +20,7 @@ We'll use 8-bit binary representation for simplicity.
   - -19<sub>10</sub> = 10010011<sub>2</sub>
   - -12<sub>10</sub> = 10001100<sub>2</sub>
 
-- **1's complement:** Invert all the bits.
+- **1's complement:** Invert all the bits. [Note: There are two representations for zero: positive zero (00000000) and negative zero (11111111).]
   - 19<sub>10</sub> = 00010011<sub>2</sub> → -19<sub>10</sub> = 11101100<sub>2</sub>
   - 12<sub>10</sub> = 00001100<sub>2</sub> → -12<sub>10</sub> = 11110011<sub>2</sub>
 
@@ -28,3 +28,16 @@ We'll use 8-bit binary representation for simplicity.
   - 19<sub>10</sub> = 00010011<sub>2</sub> → 11101100<sub>2</sub> + 1 = 11101101<sub>2</sub>
   - 12<sub>10</sub> = 00001100<sub>2</sub> → 11110011<sub>2</sub> + 1 = 11110100<sub>2</sub>
 
+## Perform Operations
+
+### 1. 10 - 19
+
+- **Signed magnitude:**
+  ```
+  10<sub>10</sub> = 00001010<sub>2</sub>
+  -19<sub>10</sub> = 10010011<sub>2</sub>
+  Result (signed magnitude) = 10<sub>10</sub> + (-9<sub>10</sub>) = 00001010<sub>2</sub> + 10010011<sub>2</sub> = 10011101<sub>2</sub> = -29<sub>10</sub>
+  This result is incorrect since we didn't use 1's or 2's compliments method.
+  ```
+
+  
