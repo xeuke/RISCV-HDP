@@ -54,6 +54,6 @@ This guide will walk you through the steps to install and run a VirtualBox Disk 
 
 # TASK-2: Analyse these C code on Godbolt 
 
-## Analyze the following codes on C 
+## Analyze the following codes using "godbolt.org"
  - A Counter: [example](https://godbolt.org/z/caKPbcGoo)
  - Matrix Multiplication: [example](https://godbolt.org/z/19Gee3KMG)
