@@ -85,7 +85,7 @@ We'll use 8-bit binary representation for simplicity.
 - 36<sub>10</sub> = 00100100<sub>2</sub>
 - 12<sub>10</sub> = 00001100<sub>2</sub> → -12<sub>10</sub> = 11110011<sub>2</sub> [1's complement] + 1<sub>2</sub> = 11110100<sub>2</sub>
 - 24<sub>10</sub> = 00011000<sub>2</sub> 
-- Result: 36<sub>10</sub> + (-12<sub>10</sub>) = 00100100<sub>2</sub> + 11110100<sub>2</sub> = 00011000<sub>2</sub> = 24<sub>10</sub>
+- Result: 36<sub>10</sub> + (-12<sub>10</sub>) = 00100100<sub>2</sub> + 11110100<sub>2</sub> = 00011000<sub>2</sub> +1<sub>carry</sub> [Discarded] = 24<sub>10</sub>
 
 ### Summary
 
