@@ -8,7 +8,7 @@ We'll use 8-bit binary representation for simplicity.
 
 ### Conversion of Decimal Numbers to Binary:
 
-- \(10_{10}\) = `00001010<sub>2</sub>`
+- \(10~10~\) = `00001010<sub>2</sub>`
 - \(19_{10}\) = `00010011<sub>2</sub>`
 - \(20_{10}\) = `00010100<sub>2</sub>`
 - \(30_{10}\) = `00011110<sub>2</sub>`
