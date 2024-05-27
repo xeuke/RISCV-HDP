@@ -1,4 +1,5 @@
-# Binary Arithmetic Operations Using Signed, 1's Complement, and 2's Complement
+# Task-1: Calculate 10-19, 20+30, 36-12 using signed, 1s and 2s complements
+## Binary Arithmetic Operations Using Signed, 1's Complement, and 2's Complement
 
 This document demonstrates the calculation of three arithmetic operations using signed, 1's complement, and 2's complement binary representations.
 
