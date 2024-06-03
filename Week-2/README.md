@@ -38,5 +38,5 @@ Use the following commands as an example for all c-codes:
   - ```riscv64-unknown-elf-objdump -d -r mulMat.o > mulMat_assembly.txt```
 
 -Counter
-  - ```riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o counter.o counter.c  ```
+  - ```riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o counter.o counter.c```
   - ```riscv64-unknown-elf-objdump -d -r counter.o > counter_assembly.txt ```
