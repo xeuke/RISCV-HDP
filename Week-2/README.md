@@ -29,14 +29,14 @@ Use the following commands:
 ###  To generate assembly code text file:
 ```IMPORTANT: Make sure to remove #include libraries and printf statement before performing this step.```
 Use the following commands as an example for all c-codes:
--ALU
+- ALU
   - ```riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o alu.o alu.c ```
   - ```riscv64-unknown-elf-objdump -d -r alu.o > alu_assembly.txt```
 
--Matrix Multiplication
+- Matrix Multiplication
   - ```riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o mulMat.o mulMat.c```
   - ```riscv64-unknown-elf-objdump -d -r mulMat.o > mulMat_assembly.txt```
 
--Counter
+- Counter
   - ```riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o counter.o counter.c```
   - ```riscv64-unknown-elf-objdump -d -r counter.o > counter_assembly.txt ```
