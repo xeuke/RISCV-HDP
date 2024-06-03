@@ -13,7 +13,7 @@ Use the following commands:
 ### Matrix Multiplication:
 Use the following commands:
 - ```riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -ffreestanding -o mulMat.o mulMat.c```
-- ```ss```
+- ```spike pk mulMat.o```
   
 ![image](https://github.com/xeuke/RISCV-HDP/assets/20591370/bc252cfd-7b3f-43a3-98a2-1b36e5241425)
 
