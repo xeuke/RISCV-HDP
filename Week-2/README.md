@@ -44,7 +44,7 @@ Use the following commands to generate assembly files as text:
 ## Task-3: Measure the CPU performance of all the above programs using RISC-V disassembler
 
 ###  Counter:
-
+```
 Instruction     Occurrences   Cycles/Instr   Total Cycles
 --------------------------------------------------------
 addi            63             7             441
@@ -74,11 +74,11 @@ bge              1             1             1
 jr               1             2             2
 --------------------------------------------------------
 Total Cycles: 1860
-
+```
 ```Assuming a clock of 500 MHz i.e. period of 2ns, Total CPU Time = 1860 x 2ns = 3.72ms```
 
 ###  Matrix Multiplication:
-
+```
 Instruction     Occurrences   Cycles/Instr   Total Cycles
 --------------------------------------------------------
 addi            75             7             525
@@ -108,10 +108,10 @@ bge             5              1             5
 jr              4              2             8
 --------------------------------------------------------
 Total Cycles: 2109
-
+```
 ```Assuming a clock of 500 MHz i.e. period of 2ns, Total CPU Time = 2109 x 2ns = 4.218ms```
 ###  ALU:
-
+```
 Instruction     Occurrences   Cycles/Instr   Total Cycles
 --------------------------------------------------------
 addi           28             7            196         
@@ -141,6 +141,6 @@ bge            1              1            1
 jr             4              2            8           
 --------------------------------------------------------
 Total Cycles: 937
-
+```
 
 ```Assuming a clock of 500 MHz i.e. period of 2ns, Total CPU Time = 937 x 2ns = 1.874ms```
