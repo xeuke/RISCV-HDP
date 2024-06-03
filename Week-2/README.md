@@ -75,7 +75,7 @@ jr               1             2             2
 --------------------------------------------------------
 Total Cycles: 1860
 ```
-```Assuming a clock of 500 MHz i.e. period of 2ns, Total CPU Time = 1860 x 2ns = 3.72ms```
+*Assuming a clock of 500 MHz i.e. period of 2ns, Total CPU Time = 1860 x 2ns = 3.72ms*
 
 ###  Matrix Multiplication:
 ```
@@ -109,7 +109,8 @@ jr              4              2             8
 --------------------------------------------------------
 Total Cycles: 2109
 ```
-```Assuming a clock of 500 MHz i.e. period of 2ns, Total CPU Time = 2109 x 2ns = 4.218ms```
+*Assuming a clock of 500 MHz i.e. period of 2ns, Total CPU Time = 2109 x 2ns = 4.218ms*
+
 ###  ALU:
 ```
 Instruction     Occurrences   Cycles/Instr   Total Cycles
@@ -143,4 +144,4 @@ jr             4              2            8
 Total Cycles: 937
 ```
 
-```Assuming a clock of 500 MHz i.e. period of 2ns, Total CPU Time = 937 x 2ns = 1.874ms```
+*Assuming a clock of 500 MHz i.e. period of 2ns, Total CPU Time = 937 x 2ns = 1.874ms*
