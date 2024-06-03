@@ -40,3 +40,5 @@ Use the following commands to generate assembly files as text:
 - Counter
   - ```riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o counter.o counter.c```
   - ```riscv64-unknown-elf-objdump -d -r counter.o > counter_assembly.txt ```
+
+## Task-3: Measure the CPU performance of all the above programs using either Godbolt.org or RISC-V disassembler
