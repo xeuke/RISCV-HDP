@@ -28,7 +28,7 @@ Use the following commands:
 
 ###  To generate assembly code text file:
 ```IMPORTANT: Make sure to remove #include libraries and printf statement before performing this step.```
-Use the following commands as an example for all c-codes:
+Use the following commands to generate assembly files as text:
 - ALU
   - ```riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -o alu.o alu.c ```
   - ```riscv64-unknown-elf-objdump -d -r alu.o > alu_assembly.txt```
