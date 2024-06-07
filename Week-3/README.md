@@ -6,5 +6,10 @@ This project involves developing an automated room temperature monitoring and co
 
 ### Block Diagram:
 
-![image](https://github.com/xeuke/RISCV-HDP/assets/20591370/ebf71a3a-ab24-42b7-aef3-bab1eb06c5f7)
+![image](https://github.com/xeuke/RISCV-HDP/assets/20591370/a5db73c0-6078-45c7-b110-5c8bb9fbc1ed)
+
+- GPIO is mapped with x31 register
+- We can use the 8-LSbs to store the data read from the temperature sensor
+- 'Bit-30' is used to enable control for increasing temperature (1: enable temp increase, 0: do nothing), for this application it will be represented with a green LED
+- 'Bit-28' is used to enable control for decreasing temperature (1: enable temp decrease, 0: do nothing), for this application it will be represented with a green LED
 
