@@ -6,7 +6,7 @@ This project involves developing an automated room temperature monitoring and co
 
 ### Block Diagram:
 
-![image](https://github.com/xeuke/RISCV-HDP/assets/20591370/a5db73c0-6078-45c7-b110-5c8bb9fbc1ed)
+![image](https://github.com/xeuke/RISCV-HDP/assets/20591370/ef1c15ff-865d-4398-bda3-12e5838ddf54)
 
 - GPIO is mapped with x31 register
 - We can use the 8-LSbs to store the data read from the temperature sensor
