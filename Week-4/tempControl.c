@@ -36,7 +36,7 @@ int main()
 
         // Masks to clear specific bits for temperature control
         int temp_mask = 0xEFFFFFFF; // Clear x30[30] bit (for temp increase control)
-        int temp_dec_mask = 0xEFFFFFFF; // Clear x30[28] bit (for temp decrease control)
+        int temp_dec_mask = 0xF7FFFFFF; // Clear x30[28] bit (for temp decrease control)
 
         // Update x30 register with new temperature control states
         asm volatile(
