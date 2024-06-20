@@ -1,43 +1,81 @@
 #include <stdio.h>
+#include <stdint.h>
 
 int main()
 {
-    int temp_data;       // 8-bit temperature data from the sensor
-    int temp_threshold = 100; // Example threshold for temperature change
-    int temp_increase = 0;    // Control bit for increasing temperature (1: enable, 0: do nothing)
-    int temp_decrease = 0;    // Control bit for decreasing temperature (1: enable, 0: do nothing)
-    int x30 = 0;        // Simulating x30 register for testing purposes
+    int desired_temp = 25; // Desired temperature
+    int min_temp = 16; // Minimum temperature
+    int current_temp; // Current temperature from sensor
+    int delta_temp = 5; // Initial delta temperature
+    int temp_requirement; // Temperature requirement
+    int timer_A = 0; // 15 minutes timer (in increments of 15 minutes)
+    int timer_B = 0; // 2 hours timer (counts 15-minute intervals, reset every 8)
+    int timer_C = 0; // 8 hours timer (counts 2-hour intervals, reset every 4)
+    int fan_state = 0; // Fan state: 0 for OFF, 1 for ON
+    int ac_state = 1; // AC state: 0 for OFF, 1 for ON
+    uint32_t x30 = 0; // Simulating x30 register for testing purposes
 
     while (1)
     {
-        // Read temperature sensor data (8-bit) into temp_data
+        // Read temperature sensor data (simulated input)
+        printf("Enter current temperature: ");
+        scanf("%d", &current_temp);
+
+        // Write current temperature to x30 at 8-LSBs
         asm volatile(
-            "andi %0, %1, 0xFF\n\t" // Assuming temperature data is available in x30[7:0]
-            : "=r"(temp_data)
-            : "r"(x30)
+            "andi %0, %0, 0xFFFFFF00\n\t"  // Clear the 8 LSBs of x30
+            "or %0, %0, %1\n\t"            // Set the 8 LSBs of x30 with current_temp
+            : "+r"(x30)
+            : "r"(current_temp & 0xFF)
             :
         );
 
-        printf("Temperature data read: %d\n", temp_data);
+        printf("x30 after writing temperature: 0x%X\n", x30);
 
-        // Check the 8-bit temperature data and set control bits accordingly
-        if (temp_data > temp_threshold + 4) // Temperature above threshold
+        // Calculate temperature requirement
+        temp_requirement = 27 - delta_temp;
+
+        // Check if current temperature >= temp requirement
+        if (current_temp >= temp_requirement)
         {
-            temp_increase = 0;  // No need to increase temperature
-            temp_decrease = 1;  // Enable control to decrease temperature
-        }
-        else if (temp_data < temp_threshold - 4) // Temperature below threshold
-        {
-            temp_increase = 1;  // Enable control to increase temperature
-            temp_decrease = 0;  // No need to decrease temperature
+            ac_state = 0; // Turn OFF AC
+            fan_state = 1; // Turn ON Fan
         }
         else
         {
-            temp_increase = 0;  // No control action required
-            temp_decrease = 0;  // No control action required
+            ac_state = 1; // Turn ON AC
+            fan_state = 0; // Turn OFF Fan
         }
 
-        printf("Control bits set: temp_increase = %d, temp_decrease = %d\n", temp_increase, temp_decrease);
+        printf("AC State: %d, Fan State: %d, Temp Requirement: %d, Current Temp: %d\n", ac_state, fan_state, temp_requirement, current_temp);
+
+        // Simulate waiting for 15 minutes using a loop
+        for (timer_A = 0; timer_A < 10000; timer_A++)
+        {
+            // Simulate the delay of Timer A by 15 minutes
+        }
+   
+        // Increment Timer B by 1 for each Timer A completion
+        timer_B++;
+
+        // Check if Timer B counter == 8 (2 Hours)
+        if (timer_B >= 8)
+        {
+            delta_temp += 1; // Increase delta_temp by 1°C
+            timer_B = 0; // Reset Timer B to 0
+
+            // Increment Timer C by 1 for each 2-hour interval completion
+            timer_C++;
+        }
+
+        // Check if Timer C counter == 4 (8 Hours)
+        if (timer_C >= 4)
+        {
+            ac_state = 0; // Turn OFF AC
+            fan_state = 0; // Turn OFF Fan
+            printf("8 hours have passed. Turning off AC and Fan.\n");
+            break; // End the program
+        }
 
         // Masks to clear specific bits for temperature control
         int temp_mask = 0xBFFFFFFF; // Clear x30[30] bit (for temp increase control)
@@ -48,7 +86,7 @@ int main()
             "andi %0, %1, %2\n\t"  // Clear bit 30
             "or %0, %0, %3\n\t"    // Set bit 30 if temp_increase is 1
             : "=r"(x30)
-            : "r"(x30), "r"(temp_mask), "r"(temp_increase << 30)
+            : "r"(x30), "r"(temp_mask), "r"(ac_state << 30)
             :
         );
 
@@ -58,16 +96,11 @@ int main()
             "andi %0, %1, %2\n\t"  // Clear bit 28
             "or %0, %0, %3\n\t"    // Set bit 28 if temp_decrease is 1
             : "=r"(x30)
-            : "r"(x30), "r"(temp_dec_mask), "r"(temp_decrease << 28)
+            : "r"(x30), "r"(temp_dec_mask), "r"(fan_state << 28)
             :
         );
 
         printf("x30 after temp_decrease update: 0x%X\n", x30);
-
-        // Assume some delay or wait to prevent too frequent updates
-        for (int i = 0; i < 100000; i++) {
-            // SET delay or TIMER
-        }
     }
 
     return 0;
