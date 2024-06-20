@@ -72,8 +72,8 @@ int main()
         if (timer_C >= 4)
         {
             ac_state = 0; // Turn OFF AC
-            fan_state = 0; // Turn OFF Fan
-            printf("8 hours have passed. Turning off AC and Fan.\n");
+            fan_state = 1; // Fan is ON
+            printf("8 hours have passed. Turning off AC.\n");
             break; // End the program
         }
 
